@@ -77,8 +77,9 @@ In caso di dubbio in merito alla validità di una data assenza, invia una e-mai 
 
 ## Come faccio a caricare su Virtuale l'elaborato relativo ad un dato laboratorio?
 
-La consegna deve avvenire, da parte dei singoli studenti, caricando l'elaborato
-[alla pagina su Virtuale relativa al laboratorio per il quale si effettua la consegna](https://virtuale.unibo.it/course/view.php?id=64466#section-3).
+La consegna deve avvenire, da parte dei singoli studenti, caricando l'elaborato **alla pagina su Virtuale** relativa al laboratorio
+per il quale si effettua la consegna: [[A-L](https://virtuale.unibo.it/course/section.php?id=755072)],
+[[M-Z](https://virtuale.unibo.it/course/section.php?id=748519)].
 
 La consegna prevede il solo caricamento di file `.zip` o `.tgz`.
 
