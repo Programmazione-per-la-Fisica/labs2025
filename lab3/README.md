@@ -15,7 +15,7 @@ classi e strutture.
     - [Aggiungere altri test](#aggiungere-altri-test)
     - [Soluzione](#soluzione)
   - [Consegna obbligatoria del lavoro svolto](#consegna-obbligatoria-del-lavoro-svolto)
-  - [Questionari di laboratorio e di metà corso:](#questionari-di-laboratorio-e-di-metà-corso)
+  - [Questionari di laboratorio e di metà corso](#questionari-di-laboratorio-e-di-metà-corso)
   - [Approfondimenti e esercizi](#approfondimenti-e-esercizi)
 
 ---
@@ -459,16 +459,17 @@ $ ls
 lab3 lab3.tgz
 ```
 
-## Questionari di laboratorio e di metà corso:
+## Questionari di laboratorio e di metà corso
 
 - **Canale [A-L]**
 
   - [Questionario sul terzo laboratorio]()
-  - [Questionario di metà corso (lezioni frontali e laboratorio)]()
+  - [Questionario di metà corso (lezioni frontali e laboratorio)](https://forms.office.com/e/AHRPBF30rb)
 
 - **Canale [M-Z]**
+  
   - [Questionario sul terzo laboratorio]()
-  - [Questionario di metà corso (lezioni frontali e laboratorio)]()
+  - [Questionario di metà corso (lezioni frontali e laboratorio)](https://forms.office.com/e/7bymy50fMP)
 
 ## Approfondimenti e esercizi
 
