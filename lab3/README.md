@@ -463,12 +463,12 @@ lab3 lab3.tgz
 
 - **Canale [A-L]**
 
-  - [Questionario sul terzo laboratorio]()
+  - [Questionario sul terzo laboratorio](https://forms.cloud.microsoft/e/cdnhhrxkXM)
   - [Questionario di metà corso (lezioni frontali e laboratorio)](https://forms.office.com/e/AHRPBF30rb)
 
 - **Canale [M-Z]**
   
-  - [Questionario sul terzo laboratorio]()
+  - [Questionario sul terzo laboratorio](https://forms.cloud.microsoft/e/KyvR1TTG3u)
   - [Questionario di metà corso (lezioni frontali e laboratorio)](https://forms.office.com/e/7bymy50fMP)
 
 ## Approfondimenti e esercizi
