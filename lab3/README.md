@@ -433,7 +433,7 @@ Premesso ciò:
   il cui completamento risulta quindi necessario.
 
 La consegna deve avvenire, da parte dei singoli studenti, tramite
-[questo link per A-L]() e [questo link per M-Z](), il quale prevede il solo caricamento di file
+[questo link per A-L](https://virtuale.unibo.it/mod/assign/view.php?id=2221995) e [questo link per M-Z](), il quale prevede il solo caricamento di file
 `.zip` o `.tgz` a partire dal **primo febbraio 2026**.
 
 Supponendo che tutto il materiale sia nella cartella `lab3` (e supponendo di trovarsi in tale cartella), per creare un
