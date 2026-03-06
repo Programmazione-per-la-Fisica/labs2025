@@ -420,8 +420,8 @@ lezioni.
 Per via di quanto appena scritto, la consegna dell'elaborato relativo al lavoro svolto per questo laboratorio
  è, in via eccezionale, **obbligatoria**.
 
-A coloro che non hanno terminato l'intera traccia (inclusa l'aggiunta di ulteriori test e l'uso di `SUBCASE`), chiediamo
-di completare il lavoro in autonomia a casa.
+A coloro che non hanno terminato l'intera traccia (inclusa l'aggiunta di ulteriori test), chiediamo di completare il
+lavoro in autonomia a casa.
 
 Le consegne **non verranno valutate** e **NON contribuiscono al risultato dell'esame**.
 
