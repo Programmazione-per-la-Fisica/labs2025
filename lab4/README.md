@@ -19,6 +19,7 @@ _C++_.
     - [Versione 1: operatore somma come funzione libera](#versione-1-operatore-somma-come-funzione-libera)
     - [Versione 2: operatore somma a partire dall'operatore membro `+=`](#versione-2-operatore-somma-a-partire-dalloperatore-membro-)
   - [Consegna facoltativa del lavoro svolto](#consegna-facoltativa-del-lavoro-svolto)
+  - [Questionari di laboratorio](#questionari-di-laboratorio)
   - [Approfondimenti ed esercizi](#approfondimenti-ed-esercizi)
 
 ---
