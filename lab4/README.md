@@ -646,6 +646,13 @@ $ ls
 lab4 lab4.tgz
 ```
 
+## Questionari di laboratorio
+
+- **Canale [A-L]**
+  - Questionario sul quarto laboratorio (da effettuare)
+- **Canale [M-Z]**
+  - [Questionario sul quarto laboratorio](https://forms.cloud.microsoft/e/TWsSqHELmP)
+
 ## Approfondimenti ed esercizi
 
 Come di consueto, riportiamo alcune possibili estensioni dell'esercizio che
