@@ -2,7 +2,7 @@
 # Laboratorio 4
 
 In questa lezione riprenderemo il programma sviluppato durante il
-[terzo laboratorio](../lab3/README.md) ed andremo ad aggiungervi nuove
+[terzo laboratorio](../lab3/README.md) e andremo ad aggiungervi nuove
 funzionalità.
 Dove possibile, faremo uso degli strumenti forniti dalla _standard library_ del
 _C++_.
@@ -24,10 +24,10 @@ _C++_.
 ---
 
 L'obiettivo principale di questo laboratorio è imparare i rudimenti dell'uso di
-`std::vector<>`, implementare la somma di diversi campioni di dati (`Regression`)
-tramite l'_overload_ dell'operatore `operator+` ed abituarci a consultare la
+`std::vector<>`, implementare la somma di diverse istanze di `Regression`
+tramite l'_overload_ dell'operatore `operator+` e abituarci a consultare la
 documentazione della _standard library_ del _C++_ alla ricerca di strumenti
-(es.: _container_ ed _algoritmi_) che semplifichino lo sviluppo dei nostri
+(es.: _container_ e _algoritmi_) che semplifichino lo sviluppo dei nostri
 programmi.
 
 Durante il laboratorio vi invitiamo a tenere aperte le
@@ -43,7 +43,7 @@ utilizzata per il terzo laboratorio:
 
 ```bash
 $ pwd
-/home/battilan/pf_labs/lab4
+/home/todiotal/pf_labs/lab4
 $ cp ../lab3/doctest.h .
 $ cp ../lab3/.clang-format .
 ```
@@ -61,7 +61,7 @@ avete sviluppato, o scaricare la soluzione da noi proposta tramite il comando:
 
 ```bash
 $ pwd
-/home/battilan/pf_labs/lab4
+/home/todiotal/pf_labs/lab4
 $ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2025/main/lab3/soluzioni/regression.test.cpp -o regression.test.cpp
 ```
 
@@ -69,7 +69,7 @@ Fatto ciò, l'area di lavoro deve trovarsi in questo stato:
 
 ```bash
 $ pwd
-/home/battilan/pf_labs/lab4
+/home/todiotal/pf_labs/lab4
 $ ls -A
 .clang-format  doctest.h regression.test.cpp
 ```
@@ -82,16 +82,15 @@ versione di `Regression` risulta migliorabile sotto vari aspetti, ad esempio:
 - un eventuale utilizzatore della classe potrebbe desiderare
   rimuovere alcuni dei punti introdotti in precedenza (ad esempio, perché
   inseriti in modo incorretto);
-- potrebbe essere utile sommare assieme due campioni di punti esistenti, così da
-  evitare di aggiungere i punti uno alla volta tramite il metodo
-  `add(double x, double y)`, per generare il campione totale sul quale eseguire
-  la regressione.
+- potrebbe essere utile combinare assieme due campioni di punti esistenti,
+  rappresentati da due istanze di `Regression` diverse, al fine di
+  generare un unico campione "somma" sul quale eseguire la regressione.
 
-In entrambi i casi risulta necessario "ricordare" l'intero insieme dei punti che
+In entrambi i casi risulta opportuno "ricordare" l'intero insieme dei punti che
 sono stati aggiunti tramite il metodo `add`.
 
-Per prima cosa, introduciamo una `struct Point` che contenga le coordinate `x` e
-`y` dei singoli punti:
+Prima di procedere ad aggiungere queste funzionalità, introduciamo una
+`struct Point` che possa contenere le coordinate `x` e `y` dei singoli punti:
 
 ```c++
 struct Point {
@@ -118,8 +117,9 @@ class Regression {
 ```
 
 > [!IMPORTANT]
-> Ogni volta che incontrerete `...` questo significa che **parti di codice sono
-> state omesse per brevità o che vanno completate da parte vostra**.
+> Ogni volta che incontrerete tre punti di sospensione (`...`), significa che
+> **parti di codice sono state omesse dalla traccia per brevità** o che
+> **mancano "pezzi" del programma, la cui implementazione è lasciata a voi**.
 
 Quando aggiungiamo una variabile membro privata, la prima cosa che dobbiamo
 chiederci è quale sia il suo impatto sull'**invariante di classe**, cioè la
@@ -142,7 +142,8 @@ imporrebbe di calcolarle a partire da
 verosimilmente un impatto negativo sulla sua performance del programma.
 
 Decidiamo di optare per **la rimozione dei dati membro ridondanti,
-concettualmente più semplice, quindi più facile da implementare e mantenere**.
+concettualmente più semplice**, quindi **più facile da implementare e
+mantenere**.
 
 > [!IMPORTANT]
 > Seguendo questo approccio, non abbiamo in realtà alcuna
@@ -174,12 +175,10 @@ class Regression {
 }
 ```
 
-Notate che questa modifica avrebbe delle conseguenze profonde nel codice, in
-quanto dovremmo cambiare tutte le occorrenze del metodo
-`Regression::add(double x, double y)`. Per evitare questo, suggeriamo di
-mantenere anche l'interfaccia che permette l'inserimento di un punto a partire
-dalle coordinate, ma di implementarla a partire da
-`Regression::add(Point const& p)`:
+Per evitare di cambiare l'interfaccia esistente di `Regression`, suggeriamo di
+mantenere anche il metodo `Regression::add(double x, double y)`, che permette
+l'inserimento di un punto a partire dalle coordinate, ma di implementarlo a
+partire da `Regression::add(Point const& p)`:
 
 ```c++
 class Regression {
@@ -197,7 +196,7 @@ class Regression {
 ```
 
 > [!IMPORTANT]
-> Aggiungete dei test ulteriori per testare `Regression::add(Point const& p)`.
+> Aggiungete  ulteriori test per validare `Regression::add(Point const& p)`.
 > L'implementazione viene lasciata a voi (potete prendere spunto dai test già
 > esistenti).
 
@@ -223,7 +222,8 @@ auto fit() const {
 ```
 
 > [!IMPORTANT]
-> L'implementazione dei cambiamenti è volutamente lasciata in uno stato parziale.
+> L'implementazione dei cambiamenti è volutamente lasciata in uno stato
+> parziale.
 
 **Completate voi le modifiche** e verificate che il programma compili
 e funzioni come deve prima di procedere. In particolare, **tutti i test devono
@@ -320,7 +320,7 @@ class Regression {
 };
 ```
 
-Completate la modifica procedendo fintanto che il codice non compila ed i test
+Completate la modifica procedendo fintanto che il codice non compila e i test
 risultano tutti eseguiti con successo.
 
 > [!IMPORTANT]
@@ -375,8 +375,8 @@ TEST_CASE("Regression - removing non-existing point with coordinates") {
 > Come già fatto per il metodo `add`, potete implementare questa funzione a
 > partire dalla funzione `remove(Point const& p)`.
 
-Quando avrete finito, salvate, compilate e **controllate che tutti i test siano
-passati con successo**.
+Quando avete finito, salvate, compilate e **controllate che tutti i test siano
+eseguiti con successo**.
 
 ### Confronto di oggetti di tipo `Point`
 
@@ -407,7 +407,8 @@ bool operator==(Point const& lhs, Point const& rhs)
 > Perché questo approccio risulta essere migliore rispetto al controllo delle
 > singole coordinate per determinare se un punto è uguale ad un altro?
 > Ragionate per esempio su cosa accadrebbe al vostro codice se la struct `Point`
-> rappresentasse punti nello spazio tridimensionale invece che su un piano.
+> venisse cambiato in un secondo momento per rappresentare punti nello spazio
+> tridimensionale invece che su un piano.
 
 ## Overloading dell'operatore somma
 
@@ -618,15 +619,16 @@ sull'elaborato per i quali è richiesto feedback** esplicito da parte dei
 docenti.
 
 La consegna deve avvenire, da parte dei singoli studenti, tramite
-[questo link per A-L](https://virtuale.unibo.it/mod/assign/view.php?id=2081702) e [questo link per M-Z](https://virtuale.unibo.it/mod/assign/view.php?id=2092151), il
-quale prevede il solo caricamento di file `.zip` o `.tgz`.
+[questo link per A-L](https://virtuale.unibo.it/mod/assign/view.php?id=2081702)
+e [questo link per M-Z](https://virtuale.unibo.it/mod/assign/view.php?id=2092151),
+il quale prevede il solo caricamento di file `.zip` o `.tgz`.
 
 Supponendo che tutto il materiale sia nella cartella `lab4` (e supponendo di
 trovarsi in tale cartella), per creare un archivio `.zip` procedere come segue:
 
 ```bash
 $ pwd
-/home/battilan/pf_labs/lab4
+/home/todiotal/pf_labs/lab4
 $ cd ..
 $ zip -r lab4.zip lab4
 $ ls
@@ -637,7 +639,7 @@ Per creare un archivio `.tgz` procedere invece come segue:
 
 ```bash
 $ pwd
-/home/battilan/pf_labs/lab4
+/home/todiotal/pf_labs/lab4
 $ cd ..
 $ tar czvf lab4.tgz lab4
 $ ls
