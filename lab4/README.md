@@ -650,7 +650,7 @@ lab4 lab4.tgz
 ## Questionari di laboratorio
 
 - **Canale [A-L]**
-  - Questionario sul quarto laboratorio (da effettuare)
+  - [Questionario sul quarto laboratorio](https://forms.cloud.microsoft/e/p5asywxWTx)
 - **Canale [M-Z]**
   - [Questionario sul quarto laboratorio](https://forms.cloud.microsoft/e/TWsSqHELmP)
 
