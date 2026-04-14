@@ -95,7 +95,7 @@ Nel caso presentato in figura, relativo a **un quarto di circonferenza** di **ra
 
 dall'ultima relazione si ottiene:
 
-$$\pi =  N_{pass} / N \cdot 4 $$
+$$\pi =  (N_{pass} / N) \cdot 4 $$
 
 ### Descrizione di `hit_or_miss.cpp`
 
@@ -226,7 +226,7 @@ notiamo che il vettore di punti così generato ha la dimensione desiderata, quel
 
 Per completare l'esercizio, procediamo ora all'implementazione della funzione `compute_pi()`.
 
-Considerando la formula risolutiva del problema ($\pi = N_{pass} / N \cdot 4$), ci accorgiamo che l'unico ingrediente
+Considerando la formula risolutiva del problema ($\pi = (N_{pass} / N) \cdot 4$), ci accorgiamo che l'unico ingrediente
 mancante è il calcolo di $N_{pass}$ ovvero il _conteggio delle istanze di `Point` che soddisfano una data
 condizione_: quella di essere contenute all'interno del quarto di circonferenza di raggio unitario centrata in
 $(0, 0)$.
