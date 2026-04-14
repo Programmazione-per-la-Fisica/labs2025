@@ -62,7 +62,7 @@ $ curl -sO https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs20
 
 Il primo esercizio che affronteremo oggi consiste nello scrivere un programma che utilizza un metodo di
 [integrazione Monte Carlo](https://it.wikipedia.org/wiki/Metodo_Monte_Carlo) _hit-or-miss_ per
-[determinare il valore numerico di $\pi$](https://it.wikipedia.org/wiki/Metodo_Monte_Carlo#Determinazione_del_valore_%CF%80).
+[determinare il valore numerico di 𝛑](https://it.wikipedia.org/wiki/Metodo_Monte_Carlo#Determinazione_del_valore_%CF%80).
 
 ### Descrizione del primo problema
 
@@ -95,7 +95,7 @@ Nel caso presentato in figura, relativo a **un quarto di circonferenza** di **ra
 
 dall'ultima relazione si ottiene:
 
-$$\pi = 4 \cdot N_{pass} / N$$
+$$\pi =  N_{pass} / N \cdot 4 $$
 
 ### Descrizione di `hit_or_miss.cpp`
 
@@ -160,8 +160,7 @@ Andiamo a modificare la lista di direttive `#include` e la funzione `generate_po
 ```c++
 #include <iostream>
 #include <vector>
-
-#include<random>
+#include <random>
 ...
 ```
 
@@ -227,7 +226,7 @@ notiamo che il vettore di punti così generato ha la dimensione desiderata, quel
 
 Per completare l'esercizio, procediamo ora all'implementazione della funzione `compute_pi()`.
 
-Considerando la formula risolutiva del problema ($\pi = 4 \cdot N_{pass} / N$), ci accorgiamo che l'unico ingrediente
+Considerando la formula risolutiva del problema ($\pi = N_{pass} / N \cdot 4$), ci accorgiamo che l'unico ingrediente
 mancante è il calcolo di $N_{pass}$ ovvero il _conteggio delle istanze di `Point` che soddisfano una data
 condizione_: quella di essere contenute all'interno del quarto di circonferenza di raggio unitario centrata in
 $(0, 0)$.
@@ -746,4 +745,3 @@ proposti dei possibili approfondimenti opzionali:
 - risolvete il problema
   [_remove special characters_](https://github.com/Programmazione-per-la-Fisica/exercises/tree/main/problemi/removeSpecialCharacters)
   utilizzando dapprima cicli, poi algoritmi.
-
