@@ -581,7 +581,7 @@ essere realizzata in questo modo:
 auto generate_entries(int n, double gamma) {
     ...
     
-    std::exponential_distribution<double> exp(gamma);
+    std::exponential_distribution<double> exp{gamma};
     std::generate_n(std::back_inserter(...), n, [...]() { ... });
     
     ...
