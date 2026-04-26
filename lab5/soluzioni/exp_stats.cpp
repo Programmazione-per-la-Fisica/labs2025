@@ -22,36 +22,32 @@ auto generate_entries(int n, double gamma) {
 }
 
 double mean(std::vector<double> const& entries) {
+  assert(entries.size() > 0);
   return std::accumulate(entries.begin(), entries.end(), 0.0) / entries.size();
 }
 
 double median(std::vector<double> const& entries) {
+  assert(entries.size() > 0);
   auto e_sorted{entries};
   const std::size_t n = e_sorted.size();
-
-  assert(entries.size() == n);
 
   std::sort(e_sorted.begin(), e_sorted.end());
 
   auto it = e_sorted.begin() + n / 2;
-  auto it_prev = e_sorted.begin() + n / 2 - 1;
 
-  return n % 2 == 0 ? (*it + *it_prev) / 2.0 : *it;
+  return n % 2 == 0 ? (*it + *(it-1)) / 2.0 : *it;
 }
 
 double median_nth(std::vector<double> const& entries) {
+  assert(entries.size() > 0);
   auto e_nth{entries};
   const std::size_t n = e_nth.size();
-
-  assert(entries.size() == n);
 
   auto it = e_nth.begin() + n / 2;
 
   std::nth_element(e_nth.begin(), it, e_nth.end());
 
-  auto it_prev = std::max_element(e_nth.begin(), it);
-
-  return n % 2 == 0 ? (*it + *it_prev) / 2.0 : *it;
+  return n % 2 == 0 ? (*it + *(std::max_element(e_nth.begin(), it))) / 2.0 : *it;
 }
 
 int main() {

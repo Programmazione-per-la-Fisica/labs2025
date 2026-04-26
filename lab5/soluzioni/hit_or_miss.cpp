@@ -29,6 +29,7 @@ std::vector<Point> generate_points(int n) {
 }
 
 double compute_pi(std::vector<Point> const& points) {
+  assert(points.size() > 0);
   auto n = points.size();
   auto n_in_circle =
       std::count_if(points.begin(), points.end(),
