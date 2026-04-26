@@ -5,6 +5,8 @@
 #include <vector>
 
 auto generate_entries(int n, double gamma) {
+  assert(n > 0);
+  assert(gamma > 0.0);
   std::vector<double> entries;
   entries.reserve(n);
 

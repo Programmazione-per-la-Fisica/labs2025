@@ -12,6 +12,7 @@ struct Point {
 double norm2(const Point& p) { return p.x * p.x + p.y * p.y; }
 
 std::vector<Point> generate_points(int n) {
+  assert(n > 0);
   std::vector<Point> points;
   points.reserve(n);
 
