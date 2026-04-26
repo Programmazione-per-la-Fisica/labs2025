@@ -29,7 +29,7 @@ double median(std::vector<double> const& entries) {
   auto e_sorted{entries};
   const std::size_t n = e_sorted.size();
 
-  assert(entries.size() == n);
+  assert(static_cast<int>(entries.size()) == n);
 
   std::sort(e_sorted.begin(), e_sorted.end());
 
@@ -43,7 +43,7 @@ double median_nth(std::vector<double> const& entries) {
   auto e_nth{entries};
   const std::size_t n = e_nth.size();
 
-  assert(entries.size() == n);
+  assert(static_cast<int>(entries.size()) == n);
 
   auto it = e_nth.begin() + n / 2;
 
