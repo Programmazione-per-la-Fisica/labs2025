@@ -52,7 +52,7 @@ Siete liberi di scegliere se effettuare una copia del codice che voi stessi
 avete sviluppato, o scaricare la soluzione da noi proposta tramite il comando:
 
 ```bash
-$ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2024/main/lab4/soluzioni/regression.test.cpp -o regression.test.cpp
+$ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2025/main/lab4/soluzioni/regression.test.cpp -o regression.test.cpp
 ```
 
 Fatto ciò, l'area di lavoro deve trovarsi in questo stato:
@@ -93,7 +93,7 @@ chiave `inline` e di familiarizzare con alcuni errori comuni di compilazione e
 _linking_.
 
 Durante il laboratorio vi invitiamo a tenere aperte le
-[slide](https://github.com/Programmazione-per-la-Fisica/pf2024/releases/latest)
+[slide](https://github.com/Programmazione-per-la-Fisica/pf2025/releases/latest)
 presentate a lezione.
 
 ### Preparazione di `regression.hpp`
@@ -109,7 +109,7 @@ test:
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-TEST_CASE("Testing Regression") {
+TEST_CASE("Regression - ...") {
   ...
 }
 ```
@@ -144,7 +144,7 @@ abbiamo spostato in precedenza.
 
 #include "doctest.h"
 
-TEST_CASE("Testing Regression") {
+TEST_CASE("Regression - ...") {
   ...
 }
 ```
@@ -157,7 +157,7 @@ $ ./regression.t
 [doctest] doctest version is "2.4.11"
 [doctest] run with "--help" for options
 ===============================================================================
-[doctest] test cases:  2 |  2 passed | 0 failed | 0 skipped
+[doctest] test cases: 16 | 16 passed | 0 failed | 0 skipped
 [doctest] assertions: 45 | 45 passed | 0 failed |
 [doctest] Status: SUCCESS!
 ```
@@ -319,7 +319,7 @@ $ ./regression.t
 [doctest] doctest version is "2.4.11"
 [doctest] run with "--help" for options
 ===============================================================================
-[doctest] test cases:  2 |  2 passed | 0 failed | 0 skipped
+[doctest] test cases: 16 | 16 passed | 0 failed | 0 skipped
 [doctest] assertions: 45 | 45 passed | 0 failed |
 [doctest] Status: SUCCESS!
 ```
@@ -426,7 +426,7 @@ $ ./regression.t
 [doctest] doctest version is "2.4.11"
 [doctest] run with "--help" for options
 ===============================================================================
-[doctest] test cases:  2 |  2 passed | 0 failed | 0 skipped
+[doctest] test cases: 16 | 16 passed | 0 failed | 0 skipped
 [doctest] assertions: 45 | 45 passed | 0 failed |
 [doctest] Status: SUCCESS!
 ```
@@ -635,7 +635,7 @@ laboratorio, scaricandolo:
 ```bash
 $ pwd
 /home/battilan/pf_labs/lab6
-$ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2024/main/lab6/soluzioni/CMakeLists.txt -o CMakeLists.txt
+$ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2025/main/lab6/soluzioni/CMakeLists.txt -o CMakeLists.txt
 ```
 
 > [!NOTE]
@@ -654,7 +654,7 @@ Scarichiamo inoltre un _main program_ minimale, che fa uso della classe
 ```bash
 $ pwd
 /home/battilan/pf_labs/lab6
-$ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2024/main/lab6/soluzioni/main.cpp -o main.cpp
+$ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2025/main/lab6/soluzioni/main.cpp -o main.cpp
 ```
 
 > [!IMPORTANT]
@@ -740,7 +740,7 @@ tramite il comando `add_test( ... )`.
 > implementata, semplifica notevolmente la procedura di validazione di progetti
 > di grandi dimensioni, che includono più di un singolo eseguibile di test.
 
-Alla fine dei turni del quinto laboratorio, potrete trovare la soluzione
+Alla fine dei turni del sesto laboratorio, potrete trovare la soluzione
 dell'esercizio [al seguente link](soluzioni/).
 
 ## Consegna facoltativa del lavoro svolto
@@ -758,8 +758,9 @@ sull'elaborato per i quali è richiesto feedback** esplicito da parte dei
 docenti.
 
 La consegna deve avvenire, da parte dei singoli studenti, tramite
-[questo link](https://virtuale.unibo.it/mod/assign/view.php?id=1652615), il
-quale prevede il solo caricamento di file `.zip` o `.tgz`.
+[questo link per il canale A-L](https://virtuale.unibo.it/mod/assign/view.php?id=2081704)
+e [questo link per il canale M-Z](https://virtuale.unibo.it/mod/assign/view.php?id=2092153),
+il quale prevede il solo caricamento di file `.zip` o `.tgz`.
 
 Supponendo che tutto il materiale sia nella cartella `lab6` (e supponendo di
 trovarsi in tale cartella), per creare un archivio `.zip` procedere come segue:
