@@ -4,8 +4,8 @@
 L'obiettivo di questo laboratorio è di distribuire su più file il codice
 preparato durante il [quarto laboratorio](../lab4/README.md) per
 implementare e testare la versione "migliorata" della classe `Regression`.
-In aggiunta, utilizzeremo la famiglia di _tool_ _CMake_ per facilitare il
-processo di compilazione.
+In aggiunta, oggi utilizzeremo _CMake_ per facilitare il processo di
+compilazione.
 
 ---
 
@@ -66,9 +66,9 @@ $ ls -A
 
 ## Distribuzione del codice in più file
 
-Quello che ci prefiggiamo di fare oggi è separare il codice presente
-all'interno di `regression.test.cpp`, in modo tale da arrivare in una situazione
-in cui ci siano:
+Quello che vogliamo fare oggi è separare il codice presente all'interno di
+`regression.test.cpp`, in modo tale da arrivare in una situazione in cui ci
+siano:
 
 - due file (`regression.hpp` e `regression.cpp`) che includono tutto il
   codice necessario per il calcolo della retta di regressione, quindi tutte le
@@ -671,8 +671,8 @@ $ curl https://raw.githubusercontent.com/Programmazione-per-la-Fisica/labs2025/m
 > traccia di questo laboratorio.
 
 > [!IMPORTANT]
-> Infine, la struttura del blocco `try` `catch` presentata nel file `main.cpp`
-> verrà discussa in dettaglio nelle prossime lezioni.
+> Infine, notate come la struttura del blocco `try` `catch` presentata nel file
+> `main.cpp` sia equivalente a quella presentata a lezione.
 
 ### Comandi per compilazione e test
 
