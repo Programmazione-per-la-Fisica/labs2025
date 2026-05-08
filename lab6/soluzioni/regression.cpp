@@ -65,6 +65,4 @@ Regression operator+(Regression const& l, Regression const& r) {
   return sum += r;
 }
 
-Result fit(Regression const& reg) { return reg.fit(); }
-
 }  // namespace pf

@@ -39,7 +39,10 @@ class Regression {
 
 Regression operator+(Regression const&, Regression const&);
 
-Result fit(Regression const&);
+inline auto fit(Regression const& reg) {
+  // the following call would fail compilation if the fit method weren't const
+  return reg.fit();
+}
 
 }  // namespace pf
 
